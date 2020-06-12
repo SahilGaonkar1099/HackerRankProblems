@@ -1,0 +1,14 @@
+N=int(input()) #take the interger input
+listHelp=[];marks={} #list for help and the required dictionary
+for i in range(N):iterate through the number of students to take the next inputs and append those inputs to list
+    listHelp.append(input())
+QueryString=input()#this is for the required output 
+for i in listHelp:#iterate through the list which has lines as the items seperated by commas
+    sum=0.0
+    for j in i.split():#iterate through string by converting it to list for simplicity
+        if j.isalpha():#gives boolean value checking for word or int
+            m=j
+        else:
+            sum+=float(j)    
+    marks[m]=format(float(sum/3),'.2f')#.2f is the format specifier which gives two numbers after the decimal point.
+print(marks[QueryString])         
