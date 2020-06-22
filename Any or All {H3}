@@ -1,0 +1,12 @@
+#Problem>>>
+#You are given a space separated list of integers.
+#If all the integers are positive, then you need to check if any integer is a palindromic integer.
+
+#Code>>>
+
+N=int(input())
+Nlist=list(map(str,input().split()))
+if all(x>'0' for x in Nlist) and any(x==x[::-1] for x in Nlist):
+    print("True")
+else:
+    print("False")    
